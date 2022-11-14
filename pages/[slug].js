@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Message from '../components/message';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -48,6 +49,7 @@ export default function Details() {
   useEffect(() => {
     if (!router.isReady) return;
     getComments();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.isReady]);
   return (
     <div>
